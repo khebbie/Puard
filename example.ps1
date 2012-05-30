@@ -1,5 +1,8 @@
 ﻿function testing() {
-	echo "calling function from action" 
+    param (
+        [string]$InputStr
+        )
+    echo "hej fra function - $InputStr"
 }
 
 New-Puard csActions {
@@ -7,8 +10,8 @@ New-Puard csActions {
 }
 
 New-Puard jsActions {
-    New-PuardAction ".*.js$" {echo "hej"} "phantomjs execution"
-    New-PuardAction ".*.js$" { testing } "minimize"
+    New-PuardAction ".*.js$" { param ([string]$path )echo "hej $path"} "phantomjs execution"
+    New-PuardAction ".*.js$" { testing("parameter sent in") } "minimize"
 }
 
 New-Puard autoptestActions {
