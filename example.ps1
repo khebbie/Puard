@@ -14,7 +14,7 @@ New-Puard jsActions {
     New-PuardAction ".*.js$" { testing("parameter sent in") } "minimize"
 }
 
-New-Puard autoptestActions {
+New-Puard "autotest actions" {
     New-PuardAction ".*.test.dll$" {echo "dig"} "test changes"
     New-PuardAction ".*.dll$" {echo "puard"} "app changes"
 } 
