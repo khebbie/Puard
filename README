@@ -1,0 +1,10 @@
+Puard is a powershell command line tool to easily handle events on file system modifications.
+It is inspired by the ruby tool called 'Guard' https://github.com/guard/guard
+
+It will watch all file changes in a certain directory and send events to your code so you can respond to it.
+
+To install add to your modules directory.
+
+Then create a puardfile.ps1 in the directory you want to watch - you can look in the example.ps1 file in the repository.
+
+To invoke Puard simply write Invoke-Puard in the commandline and it will watch the current directory using the puardfile...
